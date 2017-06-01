@@ -33,10 +33,10 @@
     |               |-- FormDesign.vue   // 组件类型选择模块
     |               |-- FormInfo.vue     // 组件编辑生成模块 
     |               |-- home.vue         // 表单列表模块
-    |           |-- workeOrder           // 工单模块
-    |               |-- details.vue      // 工单详情模块模块
-    |               |-- home.vue         // 表单列表模块
-    |               |-- testDesk.vue     // 工单任务台
+    |           |-- workeOrder           // 工单模块
+    |               |-- details.vue     // 工单详情模块模块
+    |               |-- home.vue        // 表单列表模块
+    |               |-- testDesk.vue    // 表单列表模块
 	|           |-- Login.vue          	 // 登录
 	|           |-- Markdown.vue         // markdown组件
 	|           |-- MixCharts.vue        // 混合图表
