@@ -28,15 +28,15 @@
 	|           |-- Sidebar.vue          // 公共左边栏
 	|		|-- page                   	 // 主要路由页面
 	|           |-- FormDesign           // 表单设计模块
-    |               |-- DesignForm.vue       // 表单详情以及组件列表模块
-    |               |-- editForm.vue         // 表单组件修改模块
-    |               |-- FormDesign.vue       // 组件类型选择模块
-    |               |-- FormInfo.vue         // 组件编辑生成模块
-    |               |-- home.vue             // 表单列表模块
+    |               |-- DesignForm.vue   // 表单详情以及组件列表模块
+    |               |-- editForm.vue     // 表单组件修改模块
+    |               |-- FormDesign.vue   // 组件类型选择模块
+    |               |-- FormInfo.vue     // 组件编辑生成模块
+    |               |-- home.vue         // 表单列表模块
     |           |-- workeOrder           // 工单模块
-    |               |-- details.vue          // 工单详情模块模块
-    |               |-- home.vue             // 表单列表模块
-    |               |-- testDesk.vue         // 工单任务台
+    |               |-- details.vue      // 工单详情模块模块
+    |               |-- home.vue         // 表单列表模块
+    |               |-- testDesk.vue     // 工单任务台
 	|           |-- BaseTable.vue        // 基础表格
 	|           |-- Login.vue          	 // 登录
 	|           |-- Markdown.vue         // markdown组件
