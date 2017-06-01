@@ -77,21 +77,21 @@
 
 ## 配置config，连接后台接口 ##
 
-    |-- dev: {
-    |        env: require('./dev.env'),
-    |    port: 8080,
-    |   autoOpenBrowser: true,
-    |    assetsSubDirectory: 'static',
-    |    assetsPublicPath: '/',
-    |    proxyTable: {                                         // 配置接口公共地址              
-    |        '/makesCanton':{                                  // 接口地址替换的字段（最好是替换成服务器上后台接口的文件名字，一般名字都是api）
-    |            target:'http://xxx.xxx.x.xxx/makesCanton',
-    |            changeOrigin:true,
-    |            pathRewrite:{
-    |                '^/makesCanton':''
-    |            }
-    |        }
-    |--  },
+     dev: {
+            env: require('./dev.env'),
+        port: 8080,
+       autoOpenBrowser: true,
+        assetsSubDirectory: 'static',
+        assetsPublicPath: '/',
+        proxyTable: {                                         // 配置接口公共地址              
+            '/makesCanton':{                                  // 接口地址替换的字段（最好是替换成服务器上后台接口的文件名字，一般名字都是api）
+                target:'http://xxx.xxx.x.xxx/makesCanton',
+                changeOrigin:true,
+                pathRewrite:{
+                    '^/makesCanton':''
+                }
+            }
+     },
         
 ## 数据处理采用axios ## 
 	
