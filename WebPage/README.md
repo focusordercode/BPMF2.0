@@ -28,15 +28,15 @@
 	|           |-- Sidebar.vue          // 公共左边栏
 	|		|-- page                   	 // 主要路由页面
 	|           |-- FormDesign           // 表单设计模块
-                    |-- DesignForm.vue       // 表单详情以及组件列表模块
-                    |-- editForm.vue         // 表单组件修改模块
-                    |-- FormDesign.vue       // 组件类型选择模块
-                    |-- FormInfo.vue         // 组件编辑生成模块
-                    |-- home.vue             // 表单列表模块
-                |-- workeOrder           // 工单模块
-                    |-- details.vue          // 工单详情模块模块
-                    |-- home.vue             // 表单列表模块
-                    |-- testDesk.vue         // 工单任务台
+    |               |-- DesignForm.vue       // 表单详情以及组件列表模块
+    |                |-- editForm.vue         // 表单组件修改模块
+    |                |-- FormDesign.vue       // 组件类型选择模块
+    |                |-- FormInfo.vue         // 组件编辑生成模块
+    |                |-- home.vue             // 表单列表模块
+    |            |-- workeOrder           // 工单模块
+    |                |-- details.vue          // 工单详情模块模块
+    |                |-- home.vue             // 表单列表模块
+    |                |-- testDesk.vue         // 工单任务台
 	|           |-- BaseTable.vue        // 基础表格
 	|           |-- Login.vue          	 // 登录
 	|           |-- Markdown.vue         // markdown组件
@@ -58,9 +58,9 @@
 
 ## 安装步骤 ##
 
-	git clone https://github.com/focusordercode/BPMF2.0.git		// 把模板下载到本地
-	cd BPMF2.0/WebPage											// 进入模板目录
-	npm install													// 安装项目依赖，等待安装完成之后
+	git clone https://github.com/focusordercode/BPMF2.0.git	// 把模板下载到本地
+	cd BPMF2.0/WebPage										// 进入模板目录
+	npm install												// 安装项目依赖，等待安装完成之后
 
 ## 本地开发 ##
 
@@ -78,49 +78,52 @@
 一套基于vue.js2.0的桌面组件库。访问地址：[element](http://element.eleme.io/#/zh-CN/component/layout)
 
 ## 配置config，连接后台接口 ##
-dev: {
-        env: require('./dev.env'),
-        port: 8080,
-        autoOpenBrowser: true,
-        assetsSubDirectory: 'static',
-        assetsPublicPath: '/',
-        proxyTable: {                                         // 配置接口公共地址              
-            '/makesCanton':{                                  // 接口地址替换的字段（最好是替换成服务器上后台接口的文件名字，一般名字都是api）
-                target:'http://xxx.xxx.x.xxx/makesCanton',
-                changeOrigin:true,
-                pathRewrite:{
-                    '^/makesCanton':''
-                }
-            }
-        },
+
+    |-- dev: {
+    |        env: require('./dev.env'),
+    |    port: 8080,
+    |   autoOpenBrowser: true,
+    |    assetsSubDirectory: 'static',
+    |    assetsPublicPath: '/',
+    |    proxyTable: {                                         // 配置接口公共地址              
+    |        '/makesCanton':{                                  // 接口地址替换的字段（最好是替换成服务器上后台接口的文件名字，一般名字都是api）
+    |            target:'http://xxx.xxx.x.xxx/makesCanton',
+    |            changeOrigin:true,
+    |            pathRewrite:{
+    |                '^/makesCanton':''
+    |            }
+    |        }
+    |--  },
         
 ## 数据处理采用axios ## 
-安装 axios
-npm install axios （安装的最新版本，也可以安装指定版本）
+	
+    安装 axios
+    npm install axios （安装的最新版本，也可以安装指定版本）
 
-引用axios
-import axios from 'axios';
-Vue.prototype.$axios  = axios;
+    引用axios
+    import axios from 'axios';
+    Vue.prototype.$axios  = axios;
 
-使用axios
-let self = this;
-    this.$axios.post('/makesCanton/ApplyVps/getCustom',qs.stringify({
-        key:self.$cookie.get('oKey'),
-        user_id:self.$cookie.get('token'),
-        name:self.orderForm.clientName,
-        })).then( (res) =>{
-        if(res.data.status == 100){
-            self.restaurants = res.data.value;
-        }else if(res.data.status == 1011){
-            self.$message({
-                type: 'success',
-                message: '权限不足，请与管理员联系'
-            });
-        }else if(res.data.status == 1012){
-            self.$router.push('/login');
-        }
-    })
-注意：当初测试数据接口时，数据总是传送和获取不到，具体原因也不太清楚，咨询大佬后甩给我一个qs，安装成功后总算可以，
+    使用axios
+
+    let self = this;
+        this.$axios.post('/makesCanton/ApplyVps/getCustom',qs.stringify({
+            key:self.$cookie.get('oKey'),
+            user_id:self.$cookie.get('token'),
+            name:self.orderForm.clientName,
+            })).then( (res) =>{
+            if(res.data.status == 100){
+                self.restaurants = res.data.value;
+            }else if(res.data.status == 1011){
+                self.$message({
+                    type: 'success',
+                    message: '权限不足，请与管理员联系'
+                });
+            }else if(res.data.status == 1012){
+                self.$router.push('/login');
+            }
+        })
+    注意：当初测试数据接口时，数据总是传送和获取不到，具体原因也不太清楚，咨询大佬后甩给我一个qs，安装成功后总算可以，
     期间好几个小时的满百度找解决方案就不赘述了。具体使用方法参考上面内容，需要使用qs的页面需要引用qs
     
 
