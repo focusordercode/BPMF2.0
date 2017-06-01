@@ -37,7 +37,6 @@
     |               |-- details.vue      // 工单详情模块模块
     |               |-- home.vue         // 表单列表模块
     |               |-- testDesk.vue     // 工单任务台
-	|           |-- BaseTable.vue        // 基础表格
 	|           |-- Login.vue          	 // 登录
 	|           |-- Markdown.vue         // markdown组件
 	|           |-- MixCharts.vue        // 混合图表
