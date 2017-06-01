@@ -28,7 +28,7 @@
 	|           |-- Sidebar.vue          // 公共左边栏
 	|		|-- page                   	 // 主要路由页面
 	|           |-- FormDesign           // 表单设计模块
-    |           |-- FormDesign           // 表单设计模块
+    |               |-- FormDesign.vue   // 表单设计模块
     |               |-- DesignForm.vue   // 表单详情以及组件列表模块
     |               |-- editForm.vue     // 表单组件修改模块
     |               |-- FormDesign.vue   // 组件类型选择模块
