@@ -34,25 +34,24 @@
     |               |-- FormInfo.vue     // 组件编辑生成模块 
     |               |-- home.vue         // 表单列表模块
     |           |-- workeOrder           // 工单模块
-    |               |-- details.vue     // 工单详情模块模块
-    |               |-- home.vue        // 表单列表模块
-    |               |-- testDesk.vue    // 表单列表模块
+    |               |-- details.vue      // 工单详情模块模块
+    |               |-- home.vue         // 表单列表模块
+    |               |-- testDesk.vue     // 表单列表模块
 	|           |-- Login.vue          	 // 登录
 	|           |-- Markdown.vue         // markdown组件
 	|           |-- MixCharts.vue        // 混合图表
 	|           |-- Readme.vue           // 自述组件
-    |           |-- rules.vue            // 编号模块
-	|           |-- Upload.vue           // 图片上传
-	|           |-- VueEditor.vue        // 富文本编辑器
-	|           |-- VueTable.vue         // vue表格组件
-	|   |-- App.vue                      // 页面入口文件
-	|   |-- main.js                      // 程序入口文件，加载各种公共组件
-	|-- .babelrc                         // ES6语法编译配置
-	|-- .editorconfig                    // 代码编写规格
-	|-- .gitignore                       // 忽略的文件
-	|-- index.html                       // 入口html文件
-	|-- package.json                     // 项目及工具的依赖配置文件
-	|-- README.md                        // 说明
+    |           |-- rules.vue            // 编号模块
+    |           |-- Upload.vue           // 图片上传
+    |           |-- VueEditor.vue        // 富文本编辑器
+    |   |-- App.vue                      // 页面入口文件 
+	|   |-- main.vue                     // 程序入口文件，加载各种公共组件
+    |-- .babelrc                         // ES6语法编译配置
+    |-- .editorconfig                    // 代码编写规格 
+    |-- .gitignore                       // 忽略的文件
+    |-- index.html                       // 入口html文件
+    |-- package.json                     // 项目及工具的依赖配置文件
+    |-- README.md                        // 说明
 
 
 ## 安装步骤 ##
